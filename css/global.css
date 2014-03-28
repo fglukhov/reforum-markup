@@ -1,0 +1,327 @@
+[hidden] {
+    display: none;
+}
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+    overflow: hidden;
+}
+/*headings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+}
+h1 {
+  font-size: 30px;
+  line-height: 36px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h3 {
+  font-size: 18px;
+  line-height: 27px;
+}
+h4,
+h5,
+h6 {
+  line-height: 18px;
+}
+h4 {
+  font-size: 14px;
+}
+h5 {
+  font-size: 12px;
+}
+h6 {
+  font-size: 11px;
+  color: #999999;
+  text-transform: uppercase;
+}
+
+strong, b {font-weight:700;}
+em { font-style:italic;}
+p{margin:0;padding:0 0 1em;}
+img{
+	border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+a,a:link,a:visited,a:hover{outline:none;}
+form{display:block;margin:0;padding:0;}
+input,select,textarea{font:12px/1.4em Arial, Helvetica, sans-serif;}
+textarea{width:auto;line-height:1.4;}
+label{cursor:pointer;}
+table{border:0;margin:0;padding:0;border-collapse: collapse; }
+table tr td,.nopadding{padding:0;}
+
+/*bind*/
+.clear{clear:both;}
+.floatleft{float:left;}
+.floatright{float:right;}
+.textleft{text-align:left;}
+.textright{text-align:right;}
+.textcenter{text-align:center;}
+.textjustify{text-align:justify;}
+.bold{font-weight:700;}
+.italic{font-style:italic;}
+.underline{border-bottom:1px solid;}
+.upper{text-transform:uppercase;}
+.top{vertical-align:top;}
+.bottom{vertical-align:bottom;}
+.block { display:block;}
+.rel { position:relative}
+.siteSize {width:980px;margin:0 auto; position:relative; //overflow:hidden; //zoom:1}
+.overflow { overflow:hidden; //zoom:1;}
+
+/*color*/
+.white{color:white;}
+.black{color:black;}
+.red{color:red}
+.green{color:green}
+.gray { color:#76797e !important}
+.blue { color:blue}
+
+/*html5*/
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary  {display: block;}
+audio,canvas,video {display: inline-block;//display: inline;//zoom: 1;}
+figure {margin:1em 40px}
+wbr { display: inline-block; } /*Можна заменить wbr на &shy; (символ мягкого преноса)*/
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/*list*/
+ul,ol { padding: 0; margin: 0 0 9px 25px;}
+ul ul,ul ol,ol ol,ol ul { margin-bottom: 0;}
+ul {list-style: disc;}
+ol { list-style: decimal;}
+li{padding:0;margin:0;}
+ul.unstyled,ol.unstyled { margin-left: 0; list-style: none;}
+
+/*table*/
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.table th,
+.table td {
+  padding: 8px 20px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+.table th {
+   background:#d8336f;
+   color:#fff;
+}
+.table tr th:first-child,
+.table tr td:first-child {
+	text-align:left;
+}
+.table thead th {
+  vertical-align: bottom;
+}
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+
+.table-bordered {
+  border: 1px solid #dddddd;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  border-left: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid #dddddd;
+}
+
+.table-bordered caption + thead tr:first-child th,
+.table-bordered caption + tbody tr:first-child th,
+.table-bordered caption + tbody tr:first-child td,
+.table-bordered colgroup + thead tr:first-child th,
+.table-bordered colgroup + tbody tr:first-child th,
+.table-bordered colgroup + tbody tr:first-child td,
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+.table-bordered thead:first-child tr:first-child th:last-child,
+.table-bordered tbody:first-child tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+}
+
+.table-bordered thead:last-child tr:last-child th:first-child,
+.table-bordered tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 4px;
+     -moz-border-radius: 0 0 0 4px;
+          border-radius: 0 0 0 4px;
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+}
+
+.table-bordered thead:last-child tr:last-child th:last-child,
+.table-bordered tbody:last-child tr:last-child td:last-child {
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+.table-striped {}
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover td {
+  color:#d9336e;
+  
+}
+.table tbody tr:hover .checkGreen { background-position: 0 -15px}
+
+/*images*/
+img{margin:0;padding:0;display:inline-block;position:relative;zoom:1;}
+
+.top {-moz-display:inline-box;display:inline-block !important;//display:inline;//zoom:1;vertical-align:top;}
+
+/*forms*/
+.row { padding:0 0 5px 0; position:relative; height:1%;}
+.row:after { content: '.'; display: block; clear: both; visibility: hidden; height: 0; }
+
+/*placeholder*/
+::-webkit-input-placeholder  { color:#ccc; }
+input:-moz-placeholder { color:#ccc; }
+
+/*padding-bottom *5 */
+.pb5 { padding-bottom:5px !important}
+.pb10 { padding-bottom:10px !important}
+.pb15 { padding-bottom:15px !important}
+.pb20 { padding-bottom:20px !important}
+.pb25 { padding-bottom:25px !important}
+.pb30 { padding-bottom:30px !important}
+.pb35 { padding-bottom:35px !important}
+
+/*padding-top *5 */
+.pt5 { padding-top:5px !important}
+.pt10 { padding-top:10px !important}
+.pt15 { padding-top:15px !important}
+.pt20 { padding-top:20px !important}
+.pt25 { padding-top:25px !important}
+.pt30 { padding-top:30px !important}
+.pt35 { padding-top:35px !important}
+
+/*vertical middle*/
+.helper {display:-moz-inline-box; display:inline-block; height:100%; width:0px; vertical-align:middle; zoom:1; //display:inline; font-size:0;}
+.middle_inner,.middle { vertical-align:middle !important; display:inline-block !important; //display:inline !important; //zoom:1}
+.middle_inner { position:relative; left:3px;}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly]
+{
+  cursor: not-allowed !important;
+  border-color: #ddd !important;
+  color:#999 !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width: auto;
+	height: auto;
+	
+	border:none;
+	box-shadow:none;
+	
+	line-height: normal;
+	cursor: pointer;
+	padding: 0;
+	
+	border: 0 \9;
+	/* IE9 and down */
+	
+	-webkit-border-radius: 0;
+	 -moz-border-radius: 0;
+		  border-radius: 0;
+	position:relative;
+	vertical-align:top;
+	top:4px\0/; /*IE8+*/
+}
+
+.transition{
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

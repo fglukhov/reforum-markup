@@ -1,0 +1,41 @@
+/* Responsiveness */
+@media only screen and  (max-width:1025px)  {
+.vidCaption {
+	color: #000;
+	padding: 62px 0 0 40px;
+	width: 370px;
+}
+#content-slider-1.rsDefault .rsThumbsHor {
+    height: 72px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 920px;
+	margin-top:52px;
+	padding:0 30px;
+}
+.rsDefault .rsThumb {
+	float: left;
+	overflow: hidden;
+	width: 175px;
+	height: 72px;
+	padding:0 30px;
+}
+#content-slider-1.rsDefault .rsThumbsArrow {
+	width:30px;
+	background:none;
+	position:absolute;
+	top:0;
+	height:68px;
+}
+#content-slider-1.rsDefault.rsWithThumbsHor .rsThumbsArrowLeft {
+    left: -1;
+	background:url(../pic/arr_back.gif) -10px -68px no-repeat;
+}
+
+#content-slider-1.rsDefault.rsWithThumbsHor .rsThumbsArrowRight {
+    right: -1;
+	background:url(../pic/arr_back.gif) 0 0 repeat-x;
+	width:30px;
+}
+}
