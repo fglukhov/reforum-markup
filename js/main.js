@@ -52,7 +52,7 @@ $(document).ready(function(){
 	})
 	
 	function initialize() {    
-		var myLatlng = new google.maps.LatLng(55.739963,37.262000);
+		var myLatlng = new google.maps.LatLng(55.739663,37.275707);
 		var myOptions = {
 			zoom: 15,
 			scrollwheel: false,
@@ -216,4 +216,46 @@ jQuery.extend(jQuery.validator.messages, {
 	range: jQuery.validator.format("Please enter a value between {0} and {1}."),
 	max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
 	min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+});
+
+jQuery.extend(jQuery.fn, {
+	toplinkwidth: function(){
+		var totalContentWidth = jQuery('#content').outerWidth(); // ширина блока с контентом, включая padding
+		var totalTopLinkWidth = jQuery(this).children('a').outerWidth(true); // ширина самой кнопки наверх, включая padding и margin
+		var h = jQuery(window).width()/2-totalContentWidth/2-totalTopLinkWidth;
+		if(h<0){
+			// если кнопка не умещается, скрываем её
+			jQuery(this).hide();
+			return false;
+		} else {
+			if(jQuery(window).scrollTop() >= 1){
+				jQuery(this).show();
+			}
+			
+			return true;
+		}
+	}
+});
+
+jQuery(function($){
+	var topLink = $('#top-link');
+	
+  topLink.css({'padding-bottom': $(window).height()});
+	// если вам не нужно, чтобы кнопка подстраивалась под ширину экрана - удалите следующие четыре строчки в коде
+	topLink.toplinkwidth();
+	$(window).resize(function(){
+    topLink.css({'padding-bottom': $(window).height()});
+		topLink.toplinkwidth();
+	});
+	$(window).scroll(function() {
+		if($(window).scrollTop() >= 1 && topLink.toplinkwidth()) {
+			topLink.fadeIn(300);
+		} else {
+			topLink.fadeOut(300);
+		}
+	});
+	topLink.click(function(e) {
+		$("body,html").animate({scrollTop: 0}, 500);
+		return false;
+	});
 });
